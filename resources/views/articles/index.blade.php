@@ -12,12 +12,12 @@
     @if($article->user_id == Auth::user()->id)
     <div class="row">
         <div class="col-md-2">
-            <a href="articles/{{$article->id}}/edit"><?php echo Form::submit('Edit', ['class' => 'btn btn-primary']); ?></a>
+            <a href="articles/{{$article->id}}/edit">{!!Form::button('<span class="glyphicon glyphicon-edit"></span>', ['class' => 'btn btn-primary']); !!}</a>
         </div>
 
 
         <div class="col-md-2">
-            <a href="articles/{{$article->id}}/destroy"><?php echo Form::submit('Delete', ['class' => 'btn btn-primary']); ?></a>
+            <a href="articles/{{$article->id}}/destroy">{!!Form::button('<span class="glyphicon glyphicon-remove"></span>', ['class' => 'btn btn-danger']); !!}</a>
         </div>  
 
     </div> 
